@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1b101b" />
+  <meta name="description" content="A little birthday page made with a little extra affection. Happy birthday!" />
+  <meta property="og:title" content="A little celebration for you ♡" />
+  <meta property="og:description" content="Open your birthday surprise." />
+  <meta property="og:type" content="website" />
+  <title>A Little Celebration ♡</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark">✳</span>
+      <span>little moments<span class="brand-dot">.</span></span>
+    </a>
+    <div class="topbar-right">
+      <span class="today-pill"><span class="live-dot"></span> made with a little extra affection</span>
+      <button class="sound-toggle" id="sound-toggle" type="button" aria-label="Turn celebration sounds on" aria-pressed="false">
+        <svg class="sound-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4Z"/><path d="M16 9.5a4 4 0 0 1 0 5M18.5 7a7.5 7.5 0 0 1 0 10"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A LITTLE NOTE FOR SOMEONE SPECIAL</div>
+        <h1 id="hero-title">Today is all<br/>about <span class="name-accent" id="recipient-name">you</span><span class="sparkle">✦</span></h1>
+        <p class="hero-subtitle">A tiny corner of the internet, made just for you — with warm wishes, soft pink skies, happy little moments, and a little extra affection on your special day.</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="open-surprise" type="button">
+            <span>Open your surprise</span><span class="button-arrow">↗</span>
+          </button>
+          <a class="text-link" href="#little-things">Explore the little things <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-star">♡</span> Some people make ordinary days feel special.</div>
+      </div>
+
+      <div class="hero-art" aria-label="Decorative birthday illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <span class="float-spark spark-a">✦</span><span class="float-spark spark-b">✧</span><span class="float-spark spark-c">✳</span>
+        <span class="float-heart heart-a">♡</span><span class="float-heart heart-b">♡</span>
+        <div class="gift-wrap" id="gift-wrap">
+          <div class="gift-shadow"></div>
+          <div class="gift-lid"><span class="ribbon ribbon-lid"></span><span class="bow bow-left"></span><span class="bow bow-right"></span><span class="bow-knot"></span></div>
+          <div class="gift-box"><span class="ribbon ribbon-box"></span><span class="gift-shine"></span></div>
+          <div class="gift-tag">a little<br/>something</div>
+        </div>
+        <div class="art-caption"><span>♡</span> a little happiness, wrapped for you <span>♡</span></div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO FEEL THE VIBE</div>
+    </section>
+
+    <section class="surprise-section section-shell" id="surprise" aria-labelledby="surprise-title">
+      <div class="section-heading">
+        <div class="eyebrow"><span class="eyebrow-line"></span> FIRST THINGS FIRST</div>
+        <h2 id="surprise-title">A little <em>surprise</em> for you.</h2>
+        <p>Because someone as lovely as you deserves a little more than a notification.</p>
+      </div>
+      <div class="surprise-card" id="surprise-card">
+        <div class="surprise-card-glow"></div>
+        <div class="surprise-card-top"><span class="mini-label">A LITTLE BIRTHDAY LOVE NOTE</span><span class="edition-number">NO. 001 <span>✳</span></span></div>
+        <div class="surprise-content" id="surprise-content">
+          <div class="surprise-icon-wrap"><span class="surprise-icon">✿</span></div>
+          <h3>Here's to you<br/><em>and all your magic.</em></h3>
+          <p>May your days be softer, your laughs louder, your dreams closer, and your heart fuller. I hope this new chapter is gentle with you and brings you beautiful surprises.</p>
+          <button class="outline-button" id="reveal-wish" type="button">A little note, just for you <span>♡</span></button>
+        </div>
+        <div class="surprise-note" id="surprise-note" hidden>
+          <span class="note-stamp">A LITTLE SOMETHING FROM ME</span>
+          <p class="handwritten">I hope you never forget how wonderful you are. Keep that beautiful smile, keep chasing the things that light you up, and never settle for anything less than the kindness you give to others. You deserve the sweetest things life has to offer.</p>
+          <span class="note-signoff">A warm hug and the happiest wishes for your year ahead <span>♡</span></span>
+          <button class="back-link" id="close-wish" type="button">← Back to the card</button>
+        </div>
+        <div class="card-deco deco-one">✧</div><div class="card-deco deco-two">✳</div>
+      </div>
+    </section>
+
+    <section class="hearts-section section-shell" id="little-things" aria-labelledby="hearts-title">
+      <div class="section-heading centered-heading">
+        <div class="eyebrow"><span class="eyebrow-line"></span> LITTLE THINGS I HOPE YOU REMEMBER</div>
+        <h2 id="hearts-title">A few hearts. <em>A few things to remember.</em></h2>
+        <p>Tap one whenever you need a tiny reminder of how special you are.</p>
+      </div>
+      <div class="heart-playground" id="heart-playground">
+        <div class="heart-orbit orbit-one"></div><div class="heart-orbit orbit-two"></div>
+        <button class="heart-button heart-main" data-message="You have a lovely way of making ordinary moments feel special." aria-label="Reveal a happy thought">♥</button>
+        <button class="heart-button heart-small heart-pos-1" data-message="Your smile, your energy, and your way of seeing the world are worth celebrating." aria-label="Reveal another happy thought">♥</button>
+        <button class="heart-button heart-small heart-pos-2" data-message="I hope you receive the same warmth and kindness that you so naturally give." aria-label="Reveal another happy thought">♥</button>
+        <button class="heart-button heart-small heart-pos-3" data-message="Just a reminder: you are appreciated more than you probably realise." aria-label="Reveal another happy thought">♥</button>
+        <button class="heart-button heart-small heart-pos-4" data-message="May life keep giving you little reasons to smile, even on the most ordinary days." aria-label="Reveal another happy thought">♥</button>
+        <div class="thought-bubble" id="thought-bubble" role="status" aria-live="polite"><span class="thought-spark">✦</span><span id="thought-text">Your happy thought will appear here.</span></div>
+        <div class="tap-hint"><span class="tap-pulse"></span> GO ON, TAP ONE</div>
+      </div>
+      <div class="heart-counter"><span class="counter-heart">♥</span><span><strong id="heart-count">0</strong> happy thoughts unlocked</span></div>
+    </section>
+
+    <section class="birthday-mood section-shell" aria-labelledby="mood-title">
+      <div class="mood-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> TODAY'S FORECAST</div>
+        <h2 id="mood-title">100% chance of<br/><em>good things.</em></h2>
+        <p>Sunny with a hint of sparkle. Occasional bursts of laughter. High probability of cake.</p>
+        <button class="forecast-button" id="forecast-button" type="button">Check your birthday forecast <span>↗</span></button>
+      </div>
+      <div class="forecast-visual">
+        <div class="sun-rays"></div><div class="sun-disc"><span>☺</span></div>
+        <div class="cloud cloud-left"></div><div class="cloud cloud-right"></div>
+        <span class="forecast-star fs-1">✦</span><span class="forecast-star fs-2">✧</span><span class="forecast-star fs-3">✳</span>
+        <div class="forecast-label">GOOD VIBES<br/><span>ALL DAY LONG</span></div>
+      </div>
+    </section>
+
+    <section class="cake-section section-shell" aria-labelledby="cake-title">
+      <div class="cake-card">
+        <div class="cake-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> THE MOST IMPORTANT PART</div>
+          <h2 id="cake-title">Make a wish.<br/><em>Don't tell anyone.</em></h2>
+          <p>Tap the candle when you're ready. Consider this your virtual birthday cake moment.</p>
+          <button class="primary-button cake-button" id="wish-button" type="button"><span>Make a wish</span><span class="button-arrow">✦</span></button>
+          <p class="wish-result" id="wish-result" aria-live="polite"></p>
+        </div>
+        <div class="cake-visual" id="cake-visual" aria-label="A birthday cake with a candle">
+          <div class="cake-sparkle cake-sparkle-1">✧</div><div class="cake-sparkle cake-sparkle-2">✦</div>
+          <div class="candle"><div class="flame" id="flame"></div><div class="wick"></div><div class="candle-body"></div></div>
+          <div class="cake-top"></div><div class="cake-middle"><span class="icing-drip drip-1"></span><span class="icing-drip drip-2"></span><span class="icing-drip drip-3"></span></div>
+          <div class="cake-bottom"></div><div class="cake-plate"></div>
+          <div class="cake-confetti cake-confetti-1">✳</div><div class="cake-confetti cake-confetti-2">✦</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section section-shell">
+      <div class="closing-stars" aria-hidden="true">✦　✧　✳　✧　✦</div>
+      <div class="closing-mark">✿</div>
+      <p class="closing-kicker">ONE LAST THING</p>
+      <h2>Make this year<br/><em>unforgettable.</em></h2>
+      <p class="closing-copy">More laughter, more little adventures, more late-night talks, more favourite songs, and more moments that make your heart feel full. I hope this year is especially kind to you.</p>
+      <button class="share-button" id="share-button" type="button"><span>Send these birthday wishes</span><span>↗</span></button>
+      <div class="closing-footnote">A LITTLE PAGE <span>♡</span> A LOT OF GOOD WISHES</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">✳</span><span>little moments<span class="brand-dot">.</span></span></a>
+    <span>Hope today feels as lovely as you are. <span class="footer-flower">♡</span></span>
+    <a href="#top" class="back-top">BACK TO TOP ↑</a>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
